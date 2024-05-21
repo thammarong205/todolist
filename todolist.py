@@ -5,7 +5,7 @@ import logging
 app = Flask(__name__)
 
 # การกำหนดค่า URI ของฐานข้อมูล
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mssql+pyodbc://username:password@todolistsql.database.windows.net/Daung?driver=ODBC+Driver+17+for+SQL+Server'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'cnx = mysql.connector.connect(user="todolist", password="{Pa$$w0rd}", host="todolist.mysql.database.azure.com", port=3306, database="{todolistsql}", ssl_ca="{ca-cert filename}", ssl_disabled=False)'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 # การเริ่มต้นฐานข้อมูล
